@@ -1,0 +1,22 @@
+<section class="flex">
+    <div class="content">
+        <h2>Варіанти завдань</h2>
+        <p>
+            3. Створіть масив з п'яти прізвищ і виведіть їх на екран стовпчиком, починаючи
+            з останньої.
+        </p>
+    </div>
+    <div class="flex flex-row">
+        <button class="btn" (click)="calculate()">
+            <span>Згенерувати прізвища</span>
+        </button>
+    </div>
+</section>
+<section class="flex">
+    <h2>Прізвища (у зворотному порядку)</h2>
+    <div class="flex flex-column">
+        <div *ngFor="let surname of arrayOne.a">
+            <p>{{ surname }}</p>
+        </div>
+    </div>
+</section>

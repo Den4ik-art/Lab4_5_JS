@@ -1,0 +1,75 @@
+<div class="b-div-zadanie">
+    <p>3. Базовий клас: Зошит (поле: назва, кількість аркушів -k)
+        <br>Метод: Вартість: 15 k
+        <br>Нащадок: Загальна (поле - матеріал обкладинки)
+        <br>Зміни в нащадках: Змінити вартість з урахуванням надбавки за обкладинку на 50грн.
+    </p>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="notebook">
+            <h2>Зошит без обкладинки</h2>
+            <label for="name">Назва:</label>
+            <select id="name" #name>
+                <option value="line">line</option>
+                <option value="cell">cell</option>
+                <option value="grid">grid</option>
+                <option value="oblique">oblique</option>
+            </select>
+            
+            <label for="k">Кількість аркушів:</label>
+            <input type="number" id="k" placeholder="Напр., 18" #k>
+
+            <label for="N">Кількість зошитів:</label>
+            <input type="number" id="N" placeholder="Напр., 10" #N>
+        </div>
+
+        
+        <div class="notebook-cover">
+            <h2>Зошит з обкладинкою</h2>
+            <label for="name1">Назва:</label>
+            <select id="name1" #name1>
+                <option value="line">line</option>
+                <option value="cell">cell</option>
+                <option value="grid">grid</option>
+                <option value="oblique">oblique</option>
+            </select>
+            
+            <label for="k1">Кількість аркушів:</label>
+            <input type="number" id="k1" placeholder="Напр., 18" #k1>
+            
+            <label for="material">Матеріал обкладинки:</label>
+            <select id="material" #material>
+                <option value="leather">cardboard</option>
+                <option value="plastic">fabric</option>
+                <option value="leather">leather</option>
+                <option value="plastic">plastic</option>
+                <option value="paper">paper</option>
+            </select>
+
+            <label for="N1">Кількість зошитів:</label>
+            <input type="number" id="N1" placeholder="Напр., 10" #N1>
+        </div>
+    </div>
+
+    <button id="check_Notebook_Button"
+    (click)="calcNotebook(
+        name.value,
+        k.value,
+        N.value,
+        name1.value,
+        k1.value,
+        material.value,
+        N1.value
+    )"
+>
+    Розрахувати вартість
+</button>
+
+    <div class="result-container">
+        <h2>Результат виконання завдання</h2>
+        <p id="resultNotebook" class="result-text">{{ notebook_show }}</p>
+        <p id="resultNotebookCover" class="result-text">{{ notebookcover_show }}</p>
+    </div>
+</footer>

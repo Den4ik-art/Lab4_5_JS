@@ -1,0 +1,47 @@
+<section class="flex task-section">
+    <div class="content">
+        <h2 class="task-title">Варіанти завдань</h2>
+        <p class="task-description">
+            3. Дано дійсний масив А [1..5, 1..3]. Надрукувати індекси його від‘ємних
+            елементів.
+        </p>
+    </div>
+    <div class="flex flex-row input-controls">
+        <input 
+            type="number"
+            min="1"
+            max="100"
+            placeholder="Введіть N"
+            class="number-input"
+            #N
+        />
+        <input 
+            type="number"
+            min="1"
+            max="100"
+            placeholder="Введіть M"
+            class="number-input"
+            #M
+        />
+        <button class="btn calculate-btn" (click)="calculate(N.value, M.value)">
+            <span>Розрахунок</span>
+        </button>
+    </div>
+</section>
+
+<section class="flex array-section">
+    <h2 class="section-title">Двовимірний масив</h2>
+    <div class="flex flex-row flex-wrap array-container">
+        <table class="array-table">
+            <tr *ngFor="let a of arrayTwo.a; index as i">
+                <td *ngFor="let aa of arrayTwo.a[i]; index as j">{{ aa }}</td>
+            </tr>
+        </table>
+    </div>
+    <h2 class="section-title">Індекси від'ємних елементів</h2>
+    <div class="flex flex-row flex-wrap negative-indices">
+        <p *ngFor="let index of arrayTwo.negativeIndices" class="negative-index">
+            Рядок: {{ index.row }}, Стовпець: {{ index.col }}
+        </p>
+    </div>
+</section>

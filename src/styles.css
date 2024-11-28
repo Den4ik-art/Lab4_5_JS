@@ -1,1 +1,238 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../src/img/fon.webp");
+    background-color: #67067a;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Playfair Display", serif;
+}
+
+.b-header {
+    text-align: center;
+   background-color: #67067a;
+    margin-top: -22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    opacity: 0.8;
+    color: rgb(207, 250, 250);
+}
+
+.b-div-zadanie {
+    font-size: medium;
+    padding: 10px 10px 10px 10px;
+}
+
+/*Переключення між лабами*/
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: #2e2d2e;
+}
+
+.menu-main a:hover {
+    color: #67067a;
+}
+
+.menu-main a:before, .menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: 5px;
+    left: 50%;
+    background: #67067a;
+    transition: .8s;
+}
+
+.menu-main a:hover:before, 
+.menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after, 
+.menu-main .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+    .menu-main li {
+        display: block;
+    }
+    .menu-main li:after {
+        content: none;
+    }
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+h2 {
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.notebook, .notebook-cover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ba00e6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4c0070;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ba00e6;
+    border-radius: 4px;
+    background-color: #f8f0ff;
+    color: #4c0070;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="rgba(76, 0, 112, 0.8)"><polygon points="0,0 12,0 6,6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+input[type="number"] {
+    width: 88%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ba00e6;
+    border-radius: 4px;
+    background-color: #f8f0ff;
+    color: #4c0070;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    background-color: #8000ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6d00b0;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 18px;
+    color: #4c0070;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #4c0070;
+}
+
+.result-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ba00e6;
+    border-radius: 10px;
+    padding: 15px;
+    width: 20%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.result-container h2 {
+    font-size: 18px;
+    color: #4c0070;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.result-text {
+    font-size: 16px;
+    color: #4c0070;
+    line-height: 1.5;
+    margin: 5px 0;
+}
